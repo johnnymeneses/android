@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.TextView
 import org.json.JSONObject
+import java.io.BufferedReader
+import java.lang.RuntimeException
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 import java.text.DecimalFormat
@@ -16,14 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var result: TextView
     val dec = DecimalFormat("#,###.00")
-    var service: Int = 0
-    //VerificaConexao
-//        Preenche status se OK
-//            Traz a cotação de 1 dolar hoje
-    // Retorna algo para previnir que o botão seja apertado
-    //testar status offlinwe
+    var service: Int = 99
 
-    fun statusServico(): Int{
+    fun statusServico(){
 
         lateinit var status: TextView
         status = findViewById<TextView>(R.id.txtStatus)
@@ -58,17 +55,17 @@ class MainActivity : AppCompatActivity() {
                 service = 0
 
 
+
             }
             finally {
                 con.disconnect()
             }
 
         }.start()
-        return service
+
 
 
     }
-
 
 
 
@@ -77,11 +74,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Verifica Status do Serviço e Cotação atual
+
         statusServico()
 
 
         result = findViewById<TextView>(R.id.txt_result)
-
 
 
 
