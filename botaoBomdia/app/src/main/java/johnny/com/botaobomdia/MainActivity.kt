@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         result = findViewById<TextView>(R.id.txt_campo)
 
         //Botão
-        val botao = findViewById<Button>(R.id.btn_botao)
+//        val botao = findViewById<Button>(R.id.btn_botao)
 
         // Campo de texto
         val campoTexto = findViewById<EditText>(R.id.txt_edit)
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         value= "JOhnny"
 
-        botao.setOnClickListener()
+        btn_botao.setOnClickListener()
         {
 
             try{
