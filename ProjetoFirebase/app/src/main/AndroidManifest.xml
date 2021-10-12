@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFirebase">
         <activity
-            android:name=".MainActivity"
+            android:name=".formCadastro"
             android:exported="true" />
-
-        <!-- Activity que será iniciada -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" /> <!-- Activity que será iniciada -->
         <activity
             android:name=".FormLogin"
             android:exported="true">
