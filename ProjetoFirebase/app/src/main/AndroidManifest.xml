@@ -9,15 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoFirebase">
-        <activity
-            android:name="com.johnny.projetofirebase.formCadastro"
-            android:exported="true" />
-        <activity
-            android:name="com.johnny.projetofirebase.MainActivity"
-            android:exported="true" /> <!-- Activity que será iniciada -->
-        <activity
-            android:name="com.johnny.projetofirebase.FormLogin"
-            android:exported="true">
+        <activity android:name=".FormLogin" android:exported="true" />
+        <activity android:name=".formCadastro" android:exported="true" />
+        <activity android:name=".MainActivity"  android:exported="true" /> <!-- Activity que será iniciada -->
+        <activity android:name=".TelaPrincipal" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
