@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
@@ -18,6 +21,11 @@ import com.google.firebase.auth.FirebaseAuthEmailException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class formCadastro extends AppCompatActivity {
 
@@ -27,8 +35,40 @@ public class formCadastro extends AppCompatActivity {
     private EditText edit_senha;
     private Button bt_cadastrar;
 
+    String usuarioID;
+
+
     String[] mensagens = {"Preencha todos os campos","Cadastro Realizado com Sucesso"};
 
+
+    //Salvando o nome no Banco de Dados FireStore
+    private void SalvarDadosUsuario(){
+        String nome = edit_nome.getText().toString();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        //Iniciar o FirebashAuth pra obter o usuario atual
+        Map<String,Object> usuarios = new HashMap<>();
+        usuarios.put("nome",nome);
+
+        //Obter o ID do usuário atual (com o ID);
+        usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        DocumentReference documentReference = db.collection("Usuarios").document(usuarioID);
+
+        documentReference.set(usuarios).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Log.d("db","Sucesso ao salvar os dados");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("db_error","Erro ao salvar os dados"+e.toString());
+            }
+        });
+
+
+    }
     private void IniciarComponentes(){
 
         //Recuperando os ID's dos campos da Tela de Cadastro
@@ -84,6 +124,8 @@ public class formCadastro extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
+
+                        SalvarDadosUsuario();
                         //Mensagem OK
                         Snackbar snackbar = Snackbar.make(view,mensagens[1],Snackbar.LENGTH_SHORT);
                         snackbar.setBackgroundTint(Color.WHITE);
