@@ -14,6 +14,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthEmailException;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class formCadastro extends AppCompatActivity {
 
@@ -93,7 +97,34 @@ public class formCadastro extends AppCompatActivity {
 
                         //Setando o Focus no campo nome
 
+                    }else{
+                        String erro;
+
+                        try {
+                            throw task.getException();
+
+                        }catch (FirebaseAuthWeakPasswordException e){ //Senha menor que 6 caracteres
+                                erro = "Digite uma senha com no mínimo 6 caracteres";
+                        }catch (FirebaseAuthUserCollisionException e){ //Senha de email já cadastrado
+                                erro = "Esta conta já foi cadastrada";
+                        }catch (FirebaseAuthInvalidCredentialsException e){ //Senha com Email errado
+                            erro = "E-mail inválido";
+                        }catch (Exception e){
+                            erro = "Erro ao Cadastrar Usuário";
+                        }
+
+                        //Snackbar com a mensagem de erro
+                        Snackbar snackbar = Snackbar.make(view,erro,Snackbar.LENGTH_SHORT);
+                        snackbar.setBackgroundTint(Color.WHITE);
+                        snackbar.setTextColor(Color.BLACK);
+                        snackbar.show();
+
+
+
                     }
+
+
+
 
 
                 }
