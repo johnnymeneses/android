@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+//    override fun onStart() {
+//        super.onStart()
+//        geraCPF()
+//    }
     private fun geraCPF()
     {
 
