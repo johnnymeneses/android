@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/drawable/background.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/drawable/buton.xml" value="0.21875" />
+        <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/drawable/container_componentes.xml" value="0.21875" />
+        <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/drawable/container_components.xml" value="0.21875" />
+        <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/drawable/edit_text.xml" value="0.21875" />
         <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/layout/activity_form_login.xml" value="0.13677536231884058" />
         <entry key="..\:/Users/johnn/Documents/Knowledge/DEV/Android/GIT/android/JMail/app/src/main/res/layout/activity_main.xml" value="0.125" />
       </map>
