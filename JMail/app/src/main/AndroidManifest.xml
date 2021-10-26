@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JMail">
         <activity
+            android:name=".formLogin"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".formLogin"
+            android:name=".formCadastro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
