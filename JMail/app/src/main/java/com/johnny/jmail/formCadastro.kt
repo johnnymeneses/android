@@ -46,18 +46,5 @@ class formCadastro : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
