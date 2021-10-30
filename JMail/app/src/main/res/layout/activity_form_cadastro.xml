@@ -66,7 +66,7 @@
         android:id="@+id/btn_cadastro"
         style="@style/button"
         android:text="@string/cadastrar"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="20dp"
