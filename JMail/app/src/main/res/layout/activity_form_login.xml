@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="192dp"
         android:text="@string/criarconta"
-        android:textColor="#005eff"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_goneMarginTop="20dp"

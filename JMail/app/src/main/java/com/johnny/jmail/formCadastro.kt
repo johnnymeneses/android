@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
+
+
 class formCadastro : AppCompatActivity() {
 
     //Criando Objetos
@@ -14,6 +16,11 @@ class formCadastro : AppCompatActivity() {
     private var btn_cadastrar: Button?= null
 
     var usuarioID: String? = null
+
+
+
+
+
 
     //Mensagens de Erro
     var mensagens: Array<String> =
@@ -34,8 +41,23 @@ class formCadastro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_cadastro)
 
-        //        Escondendo o header roxo
+        //Escondendo o header roxo
         supportActionBar!!.hide()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
