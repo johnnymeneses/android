@@ -13,13 +13,13 @@
             android:name=".formCadastro"
             android:exported="true" />
         <activity
-            android:name=".formLogin"
+            android:name=".tela_principal"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".tela_principal"
+            android:name=".formLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
