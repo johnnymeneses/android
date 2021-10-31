@@ -18,10 +18,6 @@ class formCadastro : AppCompatActivity() {
     var usuarioID: String? = null
 
 
-
-
-
-
     //Mensagens de Erro
     var mensagens: Array<String> =
         arrayOf<String>("Preencha todos os campos", "Cadastro Realizado com Sucesso")
@@ -34,6 +30,8 @@ class formCadastro : AppCompatActivity() {
         edit_senha = findViewById(R.id.edit_senha)
         btn_cadastrar = findViewById<Button>(R.id.btn_cadastro)
     }
+
+
 
 
 
