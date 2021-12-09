@@ -17,6 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="E-mail"
+            android:drawableRight="@drawable/ic_mail"
+            app:layout_constraintStart_toStartOf="@id/logo"
+            app:layout_constraintEnd_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="@id/logo" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
