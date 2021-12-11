@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo do Container Branco -->
+
+    <style name="ContainerComponents">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+
+    </style>
+
+
+    <!-- Estilo da Caixa de Texto -->
+    <!-- Estilo do Botão -->
+
+
+
+
+
+
+</resources>
