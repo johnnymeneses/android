@@ -3,13 +3,17 @@ SPEC
 
 
 :: Tela Login v 1.0
-Pegar os dados do campo email
-Pegar os dados do campo senha
-Evento com botão que irá printar os dados na tela
-Mensagem de OK se estiver ok
-Mensagem de erro se estiver errado.
+
+Pegar os dados do campo email - ok
+Pegar os dados do campo senha - ok
+Evento com botão que irá printar os dados na tela - ok
+Mensagem de OK se estiver ok - ok
+Mensagem de erro se estiver errado ok
 
 
+Se Ok, abrir tela principal
 
+
+Colocar o nome JBank em baixo da tela
 
 :: Tela Login v 2.0
