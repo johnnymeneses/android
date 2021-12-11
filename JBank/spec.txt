@@ -1,0 +1,15 @@
+
+SPEC
+
+
+:: Tela Login v 1.0
+Pegar os dados do campo email
+Pegar os dados do campo senha
+Evento com botão que irá printar os dados na tela
+Mensagem de OK se estiver ok
+Mensagem de erro se estiver errado.
+
+
+
+
+:: Tela Login v 2.0

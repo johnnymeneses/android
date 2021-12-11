@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">JBank</string>
+
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="text_cadastro">Criar conta</string>
+    <string name="title_cadastro">Cadastre-se</string>
+
+
 </resources>
