@@ -20,9 +20,16 @@ class tela_login : AppCompatActivity() {
         //Escondendo o header
         supportActionBar!!.hide()
 
+        //chama evento Esqueci Sennha
 
-        //Chama o Evento pelo botão
 
+
+        //Chama evento Cadastrar
+
+
+
+
+        //Chama o evento Entrar
         val botaoEntrar = findViewById<Button>(R.id.btn_entrar)
         botaoEntrar.setOnClickListener() {
 
