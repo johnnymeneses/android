@@ -7,6 +7,111 @@
     android:background="@drawable/background"
     tools:context=".telaPrincipal">
 
+    <View
+        android:id="@+id/containerUser"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="@id/containerUser"
+        app:layout_constraintEnd_toEndOf="@id/containerUser"
+        app:layout_constraintTop_toTopOf="@id/containerUser"
+        app:layout_constraintBottom_toBottomOf="@id/containerUser"
+        />
+
+
+    <ImageView
+        android:id="@+id/icone_person"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintTop_toBottomOf="@id/containerUser"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/text_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nome cliente"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/containerUser"
+        app:layout_constraintStart_toEndOf="@id/icone_person"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/icone_money"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_money"
+        app:layout_constraintTop_toBottomOf="@id/text_person"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/text_saldocliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="saldo cliente"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/icone_money"
+        app:layout_constraintTop_toBottomOf="@id/text_person" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_depositar"
+        style="@style/styleButton"
+        android:layout_marginTop="70dp"
+        android:text="Depositar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_saldocliente" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sacar"
+        style="@style/styleButton"
+        android:layout_marginTop="20dp"
+        android:text="Sacar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_depositar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Transferir"
+        style="@style/styleButton"
+        android:layout_marginTop="20dp"
+        android:text="Transferir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sacar" />
+
+
+
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="wrap_content"

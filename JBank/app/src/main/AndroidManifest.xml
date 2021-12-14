@@ -16,13 +16,13 @@
             android:name=".telaCadastrese"
             android:exported="true" />
         <activity
-            android:name=".telaPrincipal"
+            android:name=".tela_login"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".tela_login"
+            android:name=".telaPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
