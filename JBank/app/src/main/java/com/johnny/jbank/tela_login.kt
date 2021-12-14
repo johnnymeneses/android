@@ -12,9 +12,19 @@ import com.google.android.material.snackbar.Snackbar
 class tela_login : AppCompatActivity() {
 
 
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_login)
+
+
+        //Classe com mensagens do Sistema
+        val mensagem = strings()
+
 
 
         //Escondendo o header
@@ -25,6 +35,7 @@ class tela_login : AppCompatActivity() {
 
 
         //Chama evento Cadastrar
+
 
 
 
@@ -43,7 +54,7 @@ class tela_login : AppCompatActivity() {
             } else {
                 //Snackbar com a mensagem de erro
 
-                val snack = Snackbar.make(it,"Email / Senha inválidos",Snackbar.LENGTH_LONG)
+                val snack = Snackbar.make(it,mensagem.mensagemErro(),Snackbar.LENGTH_LONG)
                 snack.setBackgroundTint(Color.WHITE)
                 snack.setTextColor(Color.BLACK)
                 snack.show()
