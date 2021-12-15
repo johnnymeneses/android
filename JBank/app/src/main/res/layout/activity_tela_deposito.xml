@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".telaSaque">
+    tools:context=".telaDeposito">
+
 
     <ImageView
         android:id="@+id/logo"
@@ -26,9 +27,8 @@
         app:layout_constraintTop_toBottomOf="@id/logo"
         />
 
-
     <EditText
-        android:id="@+id/edit_valor_saque"
+        android:id="@+id/edit_valor_deposito"
         style="@style/styleEditText"
         android:drawableRight="@drawable/ic_money"
         android:hint="R$"
@@ -39,12 +39,12 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_saque"
+        android:id="@+id/btn_deposito"
         style="@style/styleButton"
-        android:text="Sacar"
+        android:text="Depositar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_valor_saque"
+        app:layout_constraintTop_toBottomOf="@id/edit_valor_deposito"
 
         />
 
@@ -64,5 +64,4 @@
         app:layout_constraintVertical_bias="0.936"
 
         />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,11 +12,6 @@ import com.google.android.material.snackbar.Snackbar
 class tela_login : AppCompatActivity() {
 
 
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_login)
@@ -26,40 +21,35 @@ class tela_login : AppCompatActivity() {
         val mensagem = strings()
 
 
-
         //Escondendo o header
         supportActionBar!!.hide()
 
         //chama evento Esqueci Sennha
 
 
-
         //Chama evento Cadastrar
-
-
-
 
 
         //Chama o evento Entrar
         val botaoEntrar = findViewById<Button>(R.id.btn_entrar)
         botaoEntrar.setOnClickListener() {
 
+            TelaPrincipal()
 
-            if (validaentrada()) {
-                println("Entrada permitida")
-
-                TelaPrincipal()
-
-
-            } else {
-                //Snackbar com a mensagem de erro
-
-                val snack = Snackbar.make(it,mensagem.mensagemErro(),Snackbar.LENGTH_LONG)
-                snack.setBackgroundTint(Color.WHITE)
-                snack.setTextColor(Color.BLACK)
-                snack.show()
-
-            }
+            //Validacao entrada
+//            if (validaentrada()) {
+//                println("Entrada permitida")
+//
+//
+//            } else {
+//                //Snackbar com a mensagem de erro
+//
+//                val snack = Snackbar.make(it, mensagem.mensagemErro(), Snackbar.LENGTH_LONG)
+//                snack.setBackgroundTint(Color.WHITE)
+//                snack.setTextColor(Color.BLACK)
+//                snack.show()
+//
+//            }
         }
 
 
@@ -76,7 +66,7 @@ class tela_login : AppCompatActivity() {
     //        }
     //    }
     private fun TelaPrincipal() {
-        val intent = Intent(this,telaPrincipal::class.java)
+        val intent = Intent(this, telaPrincipal::class.java)
         startActivity(intent)
         finish()
     }
@@ -98,10 +88,6 @@ class tela_login : AppCompatActivity() {
         return (valorMail == "email" && valorSenha == "12345")
 
     }
-
-
-
-
 
 
 }

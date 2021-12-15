@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JBank">
         <activity
+            android:name=".telaTransferencia"
+            android:exported="true" />
+        <activity
+            android:name=".telaSaque"
+            android:exported="true" />
+        <activity
             android:name=".telaPrincipal"
             android:exported="true" />
         <activity
@@ -19,13 +25,13 @@
             android:name=".telaCadastrese"
             android:exported="true" />
         <activity
-            android:name=".tela_login"
+            android:name=".telaDeposito"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".telaSaque"
+            android:name=".tela_login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
