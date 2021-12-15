@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JBank">
         <activity
+            android:name=".telaPrincipal"
+            android:exported="true" />
+        <activity
             android:name=".telaEsqueciSenha"
             android:exported="true" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".telaPrincipal"
+            android:name=".telaSaque"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

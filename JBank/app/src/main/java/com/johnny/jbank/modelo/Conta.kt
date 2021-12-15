@@ -6,8 +6,9 @@ abstract class Conta(
     val numeroConta: Int
 ) {
 
-    var saldo: Double = 1000.0
+    var saldo: Double = 10400.0
         protected set
+
 
 
     abstract fun depositaRecurso(valor: Double)
