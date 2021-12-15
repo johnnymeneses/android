@@ -10,9 +10,3 @@ val jm = Cliente("Johnny Eder","12345678",12345)
 val john = contaCorrente(jm,11234,545454)
 
 
-fun contaCC() {
-
-
-    john.depositaRecurso(50.0)
-
-}

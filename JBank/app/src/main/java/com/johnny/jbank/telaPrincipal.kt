@@ -48,9 +48,9 @@ class telaPrincipal : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     fun buscaCLiente() {
 
-//        val john = Cliente("Johnny Meneses","12345678",123456)
-//        val cj = contaCorrente(john,12345,6655441)
 
+        //Refatorar: Incluir metodo de iniciar componentes
+        //Refatorar: Incluir metodo que traz os dados do cliente
 
         val nome = findViewById<TextView>(R.id.text_person)
         val saldo = findViewById<TextView>(R.id.text_saldocliente)

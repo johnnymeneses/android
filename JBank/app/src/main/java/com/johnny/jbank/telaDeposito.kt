@@ -30,8 +30,6 @@ class telaDeposito : AppCompatActivity() {
         val valorDeposito = campoValor.text.toString()
         john.depositaRecurso(valorDeposito.toDouble())
 
-        println(john.saldo)
-
         TelaPrincipal()
     }
 

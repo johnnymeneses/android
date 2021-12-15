@@ -9,8 +9,6 @@ abstract class Conta(
     var saldo: Double = 1000.0
         protected set
 
-
-
     abstract fun depositaRecurso(valor: Double)
     abstract fun sacarRecurso(valor: Double)
     abstract fun transferirRecurso(valor: Double, contaDestino: Conta)
