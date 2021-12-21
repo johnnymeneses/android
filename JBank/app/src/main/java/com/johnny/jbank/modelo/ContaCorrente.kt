@@ -27,14 +27,14 @@ class contaCorrente(
         if(valor<=0){
 //            throw  ValorInvalidoException(mensagem = "CC - R$$valor é um invalido. Operação cancelada")
             println("R$$valor é um invalido. Operação cancelada")
-        }
-
+        }else
         if(saldo<valor){
 //            throw  SaldoInsuficienteException(mensagem = "CC - Saldo R$$saldo insuficiente para o saque de R$ $valor")
             println("Saldo R$$saldo insuficiente para o saque de R$ $valor")
-        }
+        }else {
 
-        saldo-=valor
+            saldo -= valor
+        }
     }
 
     override fun transferirRecurso(valor: Double, contaDestino: Conta) {

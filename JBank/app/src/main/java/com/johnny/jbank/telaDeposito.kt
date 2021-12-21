@@ -29,7 +29,7 @@ class telaDeposito : AppCompatActivity() {
         val campoValor = findViewById<EditText>(R.id.edit_valor_deposito)
         val valorDeposito = campoValor.text.toString()
         john.depositaRecurso(valorDeposito.toDouble())
-
+        finish()
         TelaPrincipal()
     }
 

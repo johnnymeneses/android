@@ -25,7 +25,7 @@ class telaSaque : AppCompatActivity() {
         val campoValor = findViewById<EditText>(R.id.edit_valor_saque)
         val valorSaque = campoValor.text.toString()
         john.sacarRecurso(valorSaque.toDouble())
-
+        finish()
         TelaPrincipal()
 
     }

@@ -25,8 +25,6 @@ class tela_login : AppCompatActivity() {
         supportActionBar!!.hide()
 
         //chama evento Esqueci Sennha
-
-
         //Chama evento Cadastrar
 
 
@@ -34,37 +32,27 @@ class tela_login : AppCompatActivity() {
         val botaoEntrar = findViewById<Button>(R.id.btn_entrar)
         botaoEntrar.setOnClickListener() {
 
-            TelaPrincipal()
 
-            //Validacao entrada
-//            if (validaentrada()) {
-//                println("Entrada permitida")
-//
-//
-//            } else {
-//                //Snackbar com a mensagem de erro
-//
-//                val snack = Snackbar.make(it, mensagem.mensagemErro(), Snackbar.LENGTH_LONG)
-//                snack.setBackgroundTint(Color.WHITE)
-//                snack.setTextColor(Color.BLACK)
-//                snack.show()
-//
-//            }
+
+//            Validacao entrada
+            if (validaentrada()) {
+                println("Entrada permitida")
+                TelaPrincipal()
+
+            } else {
+                //Snackbar com a mensagem de erro
+                val snack = Snackbar.make(it, mensagem.mensagemErro(), Snackbar.LENGTH_LONG)
+                snack.setBackgroundTint(Color.WHITE)
+                snack.setTextColor(Color.BLACK)
+                snack.show()
+
+            }
         }
 
 
     }
 
 
-    //    @Override
-    //    protected void onStart() {
-    //        super.onStart();
-    //
-    //        FirebaseUser usuarioatual = FirebaseAuth.getInstance().getCurrentUser();
-    //        if(usuarioatual!=null){
-    //            TelaPrincipal();
-    //        }
-    //    }
     private fun TelaPrincipal() {
         val intent = Intent(this, telaPrincipal::class.java)
         startActivity(intent)
@@ -80,14 +68,11 @@ class tela_login : AppCompatActivity() {
         val valorMail = campoEmail.text.toString()
         val valorSenha = campoSenha.text.toString()
 
-//        println("Dados email $valorMail")
-//        println("Dados senha $valorSenha")
-
-
-//        return !(valorMail != "email" && valorSenha != "12345")
-        return (valorMail == "email" && valorSenha == "12345")
+        return (valorMail == "1" && valorSenha == "1")
 
     }
+
+
 
 
 }
