@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Teste"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Teste"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Teste"/>
+
+
+  </LinearLayout>
+
+<!--Orientação Vertical-->
+
+<!--Como colocar um text View ao lado do outro
+ <TextView
+        android:layout_width="0dp" <<<<
+        android:layout_height="wrap_content"
+        android:text="Teste"
+        android:layout_weight="1" metade pra um, metade pro outro
+        />
+-->
