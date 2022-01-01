@@ -14,22 +14,22 @@ class MainActivity : AppCompatActivity() {
 
         val btn_calcular = findViewById<Button>(R.id.btn_calcular)
 
-        btn_calcular.setOnClickListener(){
+        btn_calcular.setOnClickListener() {
             calculaViagem()
-
         }
-
 
 
     }
 
 
+    fun calculaViagem() {
 
-    fun calculaViagem(){
-        var distancia = findViewById<EditText>(R.id.edit_distancia)
+
         var preco = findViewById<EditText>(R.id.edit_preco)
         var autonomia = findViewById<EditText>(R.id.edit_autonomia)
         var resultado = findViewById<TextView>(R.id.txt_resultado)
+        var distancia = findViewById<EditText>(R.id.edit_distancia)
+
 
         val valorPreco = preco.text.toString().toDouble()
         val valorAutonomia = autonomia.text.toString().toDouble()
@@ -39,23 +39,11 @@ class MainActivity : AppCompatActivity() {
         val resultadoGasto = litrosNecessarioa * valorPreco
 
 
-
-
         resultado.text = ("R$ ${resultadoGasto}")
-
-
-
-
-
-
-
-
 
 
     }
 
 
-
-
-
 }
+
