@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/edit_distancia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_margin="10dp"
-        android:hint="Distância"
+        android:hint="@string/distancia"
         android:inputType="number" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
-        android:text="Total de Quilometros"/>
+        android:text="@string/total_de_quilometros" />
 
 
     <EditText
@@ -29,14 +29,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:inputType="numberDecimal"
-        android:hint="Preço" />
+        android:hint="@string/preco"
+        android:inputType="numberDecimal" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
-        android:text="Preço por litro"/>
+        android:text="@string/pre_o_por_litro" />
 
 
     <EditText
@@ -44,14 +45,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:inputType="numberDecimal"
-        android:hint="Autonomia" />
+        android:hint="@string/autonomia"
+        android:inputType="numberDecimal" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
-        android:text="KMs por litro"/>
+        android:text="@string/kms_por_litro" />
 
 
     <TextView
@@ -59,8 +61,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
-        android:textAllCaps="true"
-        android:text="seu gasto total será de"/>
+        android:text="@string/seu_gasto_total_ser_de"
+        android:textSize="18sp"
+        android:textAllCaps="true" />
 
 
     <TextView
@@ -69,19 +72,22 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:text="@string/r_0"
         android:textAllCaps="true"
-        android:textStyle="bold"
         android:textSize="30sp"
-        android:text="R$ 0"/>
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btn_calcular"
-        android:layout_marginTop="20dp"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:background="#4CAF50"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="calcular" />
+        android:layout_margin="20dp"
+        android:background="@color/purple_700"
+        android:text="@string/calcular" />
+
+
 
 </LinearLayout>
