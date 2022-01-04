@@ -2,9 +2,10 @@
 <resources>
 
     <style name="button">
-        <item name="android:layout_width">83dp</item>
-        <item name="android:layout_height">83dp</item>
-
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
         <item name="android:background">@drawable/button_shape</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">27sp</item>
@@ -13,8 +14,10 @@
     </style>
 
     <style name="button_verde">
-        <item name="android:layout_width">83dp</item>
-        <item name="android:layout_height">83dp</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
         <item name="android:background">@drawable/button_shape_verde</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">27sp</item>
@@ -23,8 +26,10 @@
     </style>
 
     <style name="button_Igual">
-        <item name="android:layout_width">83dp</item>
-        <item name="android:layout_height">83dp</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
         <item name="android:background">@drawable/button_shape_verde_igual</item>
         <item name="android:textColor">@color/fundo_display_white</item>
         <item name="android:textSize">27sp</item>
