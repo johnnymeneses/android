@@ -2,25 +2,34 @@
 <resources>
 
     <style name="button">
-        <item name="android:layout_width">80dp</item>
-        <item name="android:layout_height">80dp</item>
-        <item name="android:layout_margin">7dp</item>
+        <item name="android:layout_width">83dp</item>
+        <item name="android:layout_height">83dp</item>
+
         <item name="android:background">@drawable/button_shape</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">27sp</item>
         <item name="textAllCaps">false</item>
-        <item name="android:textStyle">bold</item>
+
     </style>
 
     <style name="button_verde">
-        <item name="android:layout_width">80dp</item>
-        <item name="android:layout_height">80dp</item>
-        <item name="android:layout_margin">7dp</item>
+        <item name="android:layout_width">83dp</item>
+        <item name="android:layout_height">83dp</item>
         <item name="android:background">@drawable/button_shape_verde</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">27sp</item>
         <item name="textAllCaps">false</item>
-        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="button_Igual">
+        <item name="android:layout_width">83dp</item>
+        <item name="android:layout_height">83dp</item>
+        <item name="android:background">@drawable/button_shape_verde_igual</item>
+        <item name="android:textColor">@color/fundo_display_white</item>
+        <item name="android:textSize">27sp</item>
+        <item name="textAllCaps">false</item>
+
     </style>
 
 
