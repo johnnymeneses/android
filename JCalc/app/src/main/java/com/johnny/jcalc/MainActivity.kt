@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         val teclaAdicao = findViewById<Button>(R.id.teclaAdicao)
         val teclaIgual = findViewById<Button>(R.id.teclaIgual)
 
+        var memoryAntes = 0
+        var memoryDepois= 0
+        var VisorSimbolo=""
+
+
         var memoria = ""
         var resultado = 0
         var result = 0
@@ -39,6 +44,39 @@ class MainActivity : AppCompatActivity() {
             visorGrande.text = "0"
             memoria = ""
         }
+
+        tecla5.setOnClickListener() {
+            memoria += "5"
+            visorGrande.text = memoria
+        }
+
+        tecla6.setOnClickListener() {
+            memoria += "6"
+            visorGrande.text = memoria
+        }
+
+
+        teclaAdicao.setOnClickListener(){
+            memoryAntes = memoria.toInt()
+            visorGrande.text = (" $memoria + ")
+            memoria = ""
+            adicao = true
+            VisorSimbolo = "+"
+
+
+        }
+
+        teclaIgual.setOnClickListener(){
+            if(adicao) {
+                result =  resultado + memoria.toInt()
+            }
+
+            visorGrande.text = result.toString()
+        }
+
+
+
+
 
         tecla0.setOnClickListener() {
             memoria += "0"
@@ -65,15 +103,7 @@ class MainActivity : AppCompatActivity() {
             visorGrande.text = memoria
         }
 
-        tecla5.setOnClickListener() {
-            memoria += "5"
-            visorGrande.text = memoria
-        }
 
-        tecla6.setOnClickListener() {
-            memoria += "6"
-            visorGrande.text = memoria
-        }
 
         tecla7.setOnClickListener() {
             memoria += "7"
@@ -87,22 +117,12 @@ class MainActivity : AppCompatActivity() {
 
         tecla9.setOnClickListener() {
             memoria += "9"
-            visorGrande.text = memoria
+            VisorSimbolo
         }
 
-        teclaAdicao.setOnClickListener(){
-            resultado = memoria.toInt()
-            memoria = ""
-            adicao = true
-        }
 
-        teclaIgual.setOnClickListener(){
-            if(adicao) {
-               result =  resultado + memoria.toInt()
-            }
 
-            visorGrande.text = result.toString()
-        }
+
 
 
     }
