@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <style name="textView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:gravity">bottom|right</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
     <style name="button">
         <item name="android:layout_width">70dp</item>
         <item name="android:layout_height">70dp</item>
@@ -9,6 +19,7 @@
         <item name="android:background">@drawable/button_shape</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">27sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
         <item name="textAllCaps">false</item>
 
     </style>

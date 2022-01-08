@@ -13,17 +13,18 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="20dp"
         android:gravity="bottom|right"
-        android:text="5x50+9"
+
         android:textColor="@color/igual_dark"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/visorGrande"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginRight="20dp"
         android:gravity="bottom|right"
-        android:text="259"
+
         android:textColor="@color/teclas_Dark"
         android:textSize="75sp" />
 
@@ -36,28 +37,25 @@
         android:gravity="bottom|center">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaC"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="C" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaParenteses"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="( )" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaPercentual"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="%" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaDivisao"
             style="@style/button_verde"
-            android:layout_gravity="center_vertical"
-
             android:text="/" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -67,29 +65,28 @@
         android:gravity="bottom|center">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla7"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="7" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla8"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="8" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla9"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="9" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaMultiplicacao"
             style="@style/button_verde"
             android:layout_gravity="center_vertical"
 
             android:text="x" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -97,29 +94,30 @@
         android:gravity="bottom|center">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla4"
             style="@style/button"
             android:layout_gravity="center_vertical"
-
             android:text="4" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla5"
             style="@style/button"
             android:layout_gravity="center_vertical"
-
             android:text="5" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla6"
             style="@style/button"
             android:layout_gravity="center_vertical"
-
             android:text="6" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaSubtracao"
             style="@style/button_verde"
             android:layout_gravity="center_vertical"
-
             android:text="-" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -127,27 +125,25 @@
         android:gravity="bottom|center">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla1"
             style="@style/button"
             android:layout_gravity="center_vertical"
-
             android:text="1" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla2"
             style="@style/button"
             android:layout_gravity="center_vertical"
-
             android:text="2" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla3"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="3" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaAdicao"
             style="@style/button_verde"
-            android:layout_gravity="center_vertical"
-
             android:text="+" />
     </LinearLayout>
 
@@ -158,27 +154,23 @@
         android:gravity="bottom|center">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaMaisMenos"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="+/-" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tecla0"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="0" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaPonto"
             style="@style/button"
-            android:layout_gravity="center_vertical"
-
             android:text="." />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/teclaIgual"
             style="@style/button_Igual"
-            android:layout_gravity="center_vertical"
-
             android:text="=" />
     </LinearLayout>
 
