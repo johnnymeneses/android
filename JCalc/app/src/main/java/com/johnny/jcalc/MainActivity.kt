@@ -7,123 +7,103 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
+    private var visorGrande: TextView? = null
+
+    private var teclaC: Button? = null
+    private var teclaAdicao: Button? = null
+    private var teclaSubtracao: Button? = null
+    private var teclaIgual: Button? = null
+
+    private var tecla4: Button? = null
+    private var tecla5: Button? = null
+    private var tecla6: Button? = null
+
+    private var preMemoria: String = ""
+    private var posMemoria: String = ""
+    private var resultado: Int = 0
+
+    private var adicao: Boolean = false
+    private var subtracao: Boolean = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
 
-        val visorGrande = findViewById<TextView>(R.id.visorGrande)
+        iniciaComponentes()
 
-        val tecla0 = findViewById<Button>(R.id.tecla0)
-        val tecla1 = findViewById<Button>(R.id.tecla1)
-        val tecla2 = findViewById<Button>(R.id.tecla2)
-        val tecla3 = findViewById<Button>(R.id.tecla3)
-        val tecla4 = findViewById<Button>(R.id.tecla4)
-        val tecla5 = findViewById<Button>(R.id.tecla5)
-        val tecla6 = findViewById<Button>(R.id.tecla6)
-        val tecla7 = findViewById<Button>(R.id.tecla7)
-        val tecla8 = findViewById<Button>(R.id.tecla8)
-        val tecla9 = findViewById<Button>(R.id.tecla9)
-        val teclaC = findViewById<Button>(R.id.teclaC)
-
-        val teclaAdicao = findViewById<Button>(R.id.teclaAdicao)
-        val teclaIgual = findViewById<Button>(R.id.teclaIgual)
-
-        var memoryAntes = 0
-        var memoryDepois= 0
-        var VisorSimbolo=""
-
-
-        var memoria = ""
-        var resultado = 0
-        var result = 0
-        var adicao = false
-
-        teclaC.setOnClickListener() {
-            visorGrande.text = "0"
-            memoria = ""
+        teclaC?.setOnClickListener() {
+            preMemoria = "" //Zerando a memoria
+            visorGrande?.text = "0" //exibindo o numero zero, sem armazenar
         }
 
-        tecla5.setOnClickListener() {
-            memoria += "5"
-            visorGrande.text = memoria
+        tecla4?.setOnClickListener() {
+            preMemoria += "4"
+            visorGrande?.text = preMemoria
         }
 
-        tecla6.setOnClickListener() {
-            memoria += "6"
-            visorGrande.text = memoria
+        tecla5?.setOnClickListener() {
+            preMemoria += "5"
+            visorGrande?.text = preMemoria
         }
 
-
-        teclaAdicao.setOnClickListener(){
-            memoryAntes = memoria.toInt()
-            visorGrande.text = (" $memoria + ")
-            memoria = ""
+        teclaAdicao?.setOnClickListener() {
             adicao = true
-            VisorSimbolo = "+"
-
-
+            posMemoria = preMemoria //Trannsformar em função pra não ficar repetindo código?
+            preMemoria = ""
         }
 
-        teclaIgual.setOnClickListener(){
-            if(adicao) {
-                result =  resultado + memoria.toInt()
+        teclaSubtracao?.setOnClickListener() {
+            subtracao = true
+            posMemoria = preMemoria
+            preMemoria = ""
+        }
+
+        teclaIgual?.setOnClickListener() {
+
+            if(adicao){
+                resultado = posMemoria.toInt() + preMemoria.toInt()
+                visorGrande?.text = resultado.toString()
+                preMemoria = resultado.toString()
+                adicao = false //desliga o comando de somar
             }
 
-            visorGrande.text = result.toString()
+            if (subtracao){
+                resultado = posMemoria.toInt() - preMemoria.toInt()
+                visorGrande?.text = resultado.toString()
+                preMemoria = resultado.toString()
+                subtracao = false
+            }
+
+
+
         }
-
-
-
-
-
-        tecla0.setOnClickListener() {
-            memoria += "0"
-            visorGrande.text = memoria
-        }
-
-        tecla1.setOnClickListener() {
-            memoria += "1"
-            visorGrande.text = memoria
-        }
-
-        tecla2.setOnClickListener() {
-            memoria += "2"
-            visorGrande.text = memoria
-        }
-
-        tecla3.setOnClickListener() {
-            memoria += "3"
-            visorGrande.text = memoria
-        }
-
-        tecla4.setOnClickListener() {
-            memoria += "4"
-            visorGrande.text = memoria
-        }
-
-
-
-        tecla7.setOnClickListener() {
-            memoria += "7"
-            visorGrande.text = memoria
-        }
-
-        tecla8.setOnClickListener() {
-            memoria += "8"
-            visorGrande.text = memoria
-        }
-
-        tecla9.setOnClickListener() {
-            memoria += "9"
-            VisorSimbolo
-        }
-
-
-
-
 
 
     }
+
+
+
+    fun iniciaComponentes() {
+
+        visorGrande = findViewById<TextView>(R.id.visorGrande)
+
+        teclaC = findViewById(R.id.teclaC)
+        teclaAdicao = findViewById(R.id.teclaAdicao)
+        teclaSubtracao = findViewById(R.id.teclaSubtracao)
+        teclaIgual = findViewById(R.id.teclaIgual)
+        tecla4 = findViewById(R.id.tecla4)
+        tecla5 = findViewById(R.id.tecla5)
+        tecla6 = findViewById(R.id.tecla6)
+    }
+
+
 }
+
+
+//Ao apertar a tecla uma segunda vez, o numero queve ser incorporado como casa decimal: 4,44,444 -- OK
+//Tecla C deve apagar o conteudo e substituir a preMemoria por um zero --OK
+
+//Limitir o visor à X caracteres
+//Logica para o botão igual não quebrar a aplicacao
