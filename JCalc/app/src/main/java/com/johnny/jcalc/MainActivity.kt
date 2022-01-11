@@ -77,13 +77,22 @@ class MainActivity : AppCompatActivity() {
 
     fun funcaoSoma(){
         adicao = true
-        posMemoria = preMemoria //Trannsformar em função pra não ficar repetindo código?
+        subtracao = false
+        multiplicacao = false
+        divisao = false
+
+        posMemoria = preMemoria
         if (preMemoria != "") preMemoria = ""
 
     }
 
     fun funcaoMultiplicar() {
         multiplicacao = true
+        adicao = false
+        subtracao = false
+        divisao = false
+
+
         posMemoria = preMemoria
         if (preMemoria != "") preMemoria = ""
     }
@@ -103,13 +112,16 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     fun funcaoIgual() {
+
         if (adicao) {
             resultado = posMemoria.toInt() + preMemoria.toInt()
             visorGrande?.text = resultado.toString()
             preMemoria = resultado.toString()
             adicao = false //desliga o comando de somar
         }
+
 
         if (subtracao) {
             resultado = posMemoria.toInt() - preMemoria.toInt()
