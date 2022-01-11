@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Udemy2">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".ex01"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ex02"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
