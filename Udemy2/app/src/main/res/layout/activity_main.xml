@@ -6,6 +6,17 @@
 
     android:orientation="vertical">
 
+    <LinearLayout
+        style="@style/linearStyle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Linear Layout" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         style="@style/linearStyle">
@@ -15,11 +26,11 @@
             android:text="01" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="02" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="03" />
 
     </LinearLayout>

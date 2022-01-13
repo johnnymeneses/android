@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Udemy2">
         <activity
-            android:name=".MainActivity"
+            android:name=".ex07"
             android:exported="true" />
         <activity
             android:name=".ex08"
             android:exported="true" />
         <activity
-            android:name=".ex07"
+            android:name=".ex06"
             android:exported="true" />
         <activity
             android:name=".ex05"
@@ -34,7 +34,7 @@
             android:name=".ex01"
             android:exported="true" />
         <activity
-            android:name=".ex06"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
