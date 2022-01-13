@@ -13,10 +13,28 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ex01"
+            android:name=".ex08"
+            android:exported="true" />
+        <activity
+            android:name=".ex07"
+            android:exported="true" />
+        <activity
+            android:name=".ex05"
+            android:exported="true" />
+        <activity
+            android:name=".ex04"
+            android:exported="true" />
+        <activity
+            android:name=".ex03"
             android:exported="true" />
         <activity
             android:name=".ex02"
+            android:exported="true" />
+        <activity
+            android:name=".ex01"
+            android:exported="true" />
+        <activity
+            android:name=".ex06"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
