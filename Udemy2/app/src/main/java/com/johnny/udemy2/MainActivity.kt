@@ -60,6 +60,30 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun ex04() {
+        val intent = Intent(this, ex04::class.java)
+        startActivity(intent)
+    }
+
+    fun ex05() {
+        val intent = Intent(this, ex05::class.java)
+        startActivity(intent)
+    }
+
+    fun ex06() {
+        val intent = Intent(this, ex06::class.java)
+        startActivity(intent)
+    }
+
+    fun ex07() {
+        val intent = Intent(this, ex07::class.java)
+        startActivity(intent)
+    }
+
+    fun ex08() {
+        val intent = Intent(this, ex08::class.java)
+        startActivity(intent)
+    }
 
 
 
