@@ -1,4 +1,6 @@
-package johnny.com.monetario
+package com.johnny.jconverter
+
+
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,34 +21,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var result: TextView
     val dec = DecimalFormat("#,###.00")
     var service: Int = 99
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
-        supportActionBar!!.hide()
-
-
-        //Verifica Status do Serviço e Cotação atual
-
-        statusServico()
-
-
-        result = findViewById<TextView>(R.id.txt_result)
-
-
-
-        val buttonConverter = findViewById<Button>(R.id.btn_converter)
-
-        buttonConverter.setOnClickListener{
-            converterValor()
-        }
-
-    }
-
-
-
 
     fun statusServico(){
 
@@ -72,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                     val res = obj.getDouble("USD_BRL")
                     status.text = "Status do Serviço: Online"
 
-                    dolarhoje!!.text = "US$1 vale hoje R$ ${dec.format(res)}"
+                    dolarhoje.text = "US$1 vale hoje R$ ${dec.format(res)}"
                     dolarhoje.visibility = View.VISIBLE
                     service = 1
 
@@ -97,7 +71,26 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
+        //Verifica Status do Serviço e Cotação atual
+
+        statusServico()
+
+
+        result = findViewById<TextView>(R.id.txt_result)
+
+
+
+        val buttonConverter = findViewById<Button>(R.id.btn_converter)
+
+        buttonConverter.setOnClickListener{
+            converterValor()
+        }
+
+    }
 
     /*
     * Here's your free API key: f962b34363554556087b
@@ -116,8 +109,6 @@ class MainActivity : AppCompatActivity() {
         val currency = when(checked) {
             R.id.radio_USD->    "USD"
             R.id.radio_EUR->    "EUR"
-            R.id.radio_GBP->    "GBP"
-            R.id.radio_ARS->    "ARS"
             else->              "NZD"
 
         }
@@ -129,40 +120,40 @@ class MainActivity : AppCompatActivity() {
         {
             return
         }
-            //Executar em paralelo
-            Thread()
-            {
-                val url =
-                    URL("https://free.currconv.com/api/v7/convert?q=${currency}_BRL&compact=ultra&apiKey=f962b34363554556087b")
-                val con = url.openConnection() as HttpsURLConnection
+        //Executar em paralelo
+        Thread()
+        {
+            val url =
+                URL("https://free.currconv.com/api/v7/convert?q=${currency}_BRL&compact=ultra&apiKey=f962b34363554556087b")
+            val con = url.openConnection() as HttpsURLConnection
 
-                try {
+            try {
 
-                    val data = con.inputStream.bufferedReader().readText()
+                val data = con.inputStream.bufferedReader().readText()
 
-                    val obj = JSONObject(data)
-
-
+                val obj = JSONObject(data)
 
 
-                    runOnUiThread()
-                    {
-                        val res = obj.getDouble("${currency}_BRL")
-                        result.text = " R$ ${dec.format(value.toDouble() * res)}"
-                        result.visibility = View.VISIBLE
-
-                    }
 
 
-                } catch (t: InternalError) {
-                    println("Erro: $t")
+                runOnUiThread()
+                {
+                    val res = obj.getDouble("${currency}_BRL")
+                    result.text = " R$ ${dec.format(value.toDouble() * res)}"
+                    result.visibility = View.VISIBLE
 
-                } finally {
-                    con.disconnect()
                 }
 
 
-            }.start()
+            } catch (t: InternalError) {
+                println("Erro: $t")
+
+            } finally {
+                con.disconnect()
+            }
+
+
+        }.start()
 
 
 

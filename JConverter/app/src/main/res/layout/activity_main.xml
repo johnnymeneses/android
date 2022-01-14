@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:backgroundTint="@color/design_default_color_primary"
-    android:layout_marginTop="80dp"
 
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -14,7 +13,7 @@
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Conversor de Valores"
+        android:text="Quanto é?"
         android:textColor="@color/purple_200"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -24,12 +23,11 @@
 
     <EditText
         android:id="@+id/edit_field"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:ems="10"
-        android:textSize="35sp"
-        android:hint="R$ 99.27"
+        android:hint="R$ 99,27"
         android:inputType="numberDecimal"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,35 +49,21 @@
             android:id="@+id/radio_USD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dólar Americano - USD"
+            android:text="USD"
             android:textSize="14sp" />
 
-        <RadioButton
-            android:id="@+id/radio_NZD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dólar Neozelandês - NZD"
-            android:textSize="14sp" />
         <RadioButton
             android:id="@+id/radio_EUR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Zona do Euro - EUR"
-            android:textSize="14sp" />
-
-
-        <RadioButton
-            android:id="@+id/radio_GBP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Libra Esterlina - GBP"
+            android:text="EUR"
             android:textSize="14sp" />
 
         <RadioButton
-            android:id="@+id/radio_ARS"
+            android:id="@+id/radio_CLP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peso Argentino - ARS"
+            android:text="NZD"
             android:textSize="14sp" />
     </RadioGroup>
 
@@ -87,7 +71,7 @@
         android:id="@+id/btn_converter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="@color/teal_200"
         android:text="Converter"
         app:layout_constraintEnd_toEndOf="parent"
