@@ -12,6 +12,9 @@ class ex02 : AppCompatActivity() {
         setContentView(R.layout.activity_ex02)
 
 
+        supportActionBar!!.hide()
+
+
         var checkBox = findViewById<CheckBox>(R.id.check)
         var imagem = findViewById<ImageView>(R.id.finger)
 

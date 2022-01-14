@@ -7,5 +7,9 @@ class ex05 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ex05)
+
+        supportActionBar!!.hide()
+
+
     }
 }
