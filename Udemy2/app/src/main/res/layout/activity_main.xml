@@ -26,11 +26,11 @@
             android:text="01" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/buttonUnable"
+            style="@style/button"
             android:text="02" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/buttonUnable"
+            style="@style/button"
             android:text="03" />
 
     </LinearLayout>
@@ -60,11 +60,11 @@
             android:text="07" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="08" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="09" />
 
     </LinearLayout>
@@ -73,15 +73,15 @@
         style="@style/linearStyle">
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="10" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="11" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/buttonUnable"
             android:text="12" />
 
     </LinearLayout>
