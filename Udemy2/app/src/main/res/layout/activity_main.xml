@@ -67,7 +67,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/num8"
-            style="@style/buttonUnable"
+            style="@style/button"
             android:text="08" />
 
         <androidx.appcompat.widget.AppCompatButton

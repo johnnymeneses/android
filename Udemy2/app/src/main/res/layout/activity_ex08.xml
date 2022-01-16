@@ -6,4 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".ex08">
 
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="B"
+        app:layout_constraintLeft_toRightOf="@id/buttonA"
+        app:layout_constraintTop_toTopOf="@id/buttonA" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="C"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonA" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--O margin Top não foi usado no botão B, pois a referencia de Topo dele agora é -->
+    <!--o botão A, que já tem a propriedade de MarginTOp-->
+
+
+    <!--Direita
+    app:layout_constraintRight_toRightOf="parent"
+    -->
+
+
+    <!--Esquerda - à esquerda do elemento Pai
+    app:layout_constraintLeft_toLeftOf="parent"
+
+    LEFT_toLeftOF
+    A esquerda fica à esquerda de quem?
+    -->
+
+    <!--Em cima alinhado ao topo do elemento pai
+    app:layout_constraintTop_toTopOf="parent"
+    -->
+
+    <!--Embaixo - àlinhado à base do elemento pai
+     app:layout_constraintBottom_toBottomOf="parent"
+
+
+    -->
