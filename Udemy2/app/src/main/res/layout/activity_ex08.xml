@@ -37,12 +37,37 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonA" />
 
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E"
+        app:layout_constraintCircle="@id/buttonD"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintTop_toTopOf="@id/buttonD" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--O margin Top não foi usado no botão B, pois a referencia de Topo dele agora é -->
     <!--o botão A, que já tem a propriedade de MarginTOp-->
+    <!--matchparent não é uma boa pratica-->
 
+    <!--bias 0 0.9 alinhamento fino-->
 
     <!--Direita
     app:layout_constraintRight_toRightOf="parent"
