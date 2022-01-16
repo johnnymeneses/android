@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val numbSeven = findViewById<Button>(R.id.num7)
         val numbEight = findViewById<Button>(R.id.num8)
         val numbNine = findViewById<Button>(R.id.num9)
+        val numbTen = findViewById<Button>(R.id.num10)
 
         val textoSair = findViewById<Button>(R.id.btnSairr)
 
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         numbSeven.setOnClickListener { ex07() }
         numbEight.setOnClickListener { ex08() }
         numbNine.setOnClickListener { ex09() }
+        numbTen.setOnClickListener { ex10() }
 
 
         textoSair.setOnClickListener { sair() }
@@ -89,6 +91,10 @@ class MainActivity : AppCompatActivity() {
 
     fun ex09() {
         val intent = Intent(this, ex09::class.java)
+        startActivity(intent)
+    }
+    fun ex10() {
+        val intent = Intent(this, ex10::class.java)
         startActivity(intent)
     }
 
