@@ -76,10 +76,10 @@
             android:textSize="14sp" />
 
         <RadioButton
-            android:id="@+id/radio_ARS"
+            android:id="@+id/radio_PYG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peso Argentino - ARS"
+            android:text="Guarani - PYG"
             android:textSize="14sp" />
     </RadioGroup>
 

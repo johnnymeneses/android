@@ -8,21 +8,25 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.TextView
 import org.json.JSONObject
-import java.io.BufferedReader
-import java.lang.RuntimeException
+
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 import java.text.DecimalFormat
 
-class MainActivity : AppCompatActivity() {
+class ConverterActivity : AppCompatActivity() {
 
     private lateinit var result: TextView
-    val dec = DecimalFormat("#,###.0000")
+    val dec = DecimalFormat("#,###.00")
     var service: Int = 99
+
+    // valor a ser digitado android:id="@+id/edit_valor_real"
+    //valor onde ficará o resultado android:id="@+id/txt_valor_dolar"
+    //android:id="@+id/image_converter"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_converter)
 
 
         supportActionBar!!.hide()
@@ -36,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         result = findViewById<TextView>(R.id.txt_result)
 
 
-
         val buttonConverter = findViewById<Button>(R.id.btn_converter)
 
         buttonConverter.setOnClickListener{
@@ -44,8 +47,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-
 
 
     fun statusServico(){
@@ -82,11 +83,10 @@ class MainActivity : AppCompatActivity() {
                 status.text = "Status do Serviço: Offline"
                 service = 0
 
-
-
             }
             finally {
                 con.disconnect()
+                status.text = "Status do Serviço: Offline"
             }
 
         }.start()
@@ -96,14 +96,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-
-
     /*
     * Here's your free API key: f962b34363554556087b
     * https://free.currconv.com/api/v7/convert?q=USD_BRL&compact=ultra&apiKey=f962b34363554556087b
     * */
-
 
 
     private fun converterValor()
@@ -129,40 +125,40 @@ class MainActivity : AppCompatActivity() {
         {
             return
         }
-            //Executar em paralelo
-            Thread()
-            {
-                val url =
-                    URL("https://free.currconv.com/api/v7/convert?q=${currency}_BRL&compact=ultra&apiKey=f962b34363554556087b")
-                val con = url.openConnection() as HttpsURLConnection
+        //Executar em paralelo
+        Thread()
+        {
+            val url =
+                URL("https://free.currconv.com/api/v7/convert?q=${currency}_BRL&compact=ultra&apiKey=f962b34363554556087b")
+            val con = url.openConnection() as HttpsURLConnection
 
-                try {
+            try {
 
-                    val data = con.inputStream.bufferedReader().readText()
+                val data = con.inputStream.bufferedReader().readText()
 
-                    val obj = JSONObject(data)
-
-
+                val obj = JSONObject(data)
 
 
-                    runOnUiThread()
-                    {
-                        val res = obj.getDouble("${currency}_BRL")
-                        result.text = " R$ ${dec.format(value.toDouble() * res)}"
-                        result.visibility = View.VISIBLE
-
-                    }
 
 
-                } catch (t: InternalError) {
-                    println("Erro: $t")
+                runOnUiThread()
+                {
+                    val res = obj.getDouble("${currency}_BRL")
+                    result.text = " R$ ${dec.format(value.toDouble() * res)}"
+                    result.visibility = View.VISIBLE
 
-                } finally {
-                    con.disconnect()
                 }
 
 
-            }.start()
+            } catch (t: InternalError) {
+                println("Erro: $t")
+
+            } finally {
+                con.disconnect()
+            }
+
+
+        }.start()
 
 
 
