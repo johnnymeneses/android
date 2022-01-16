@@ -72,7 +72,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/num9"
-            style="@style/buttonUnable"
+            style="@style/button"
             android:text="09" />
 
     </LinearLayout>

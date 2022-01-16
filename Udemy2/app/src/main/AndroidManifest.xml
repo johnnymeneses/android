@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Udemy2">
         <activity
+            android:name=".ex09"
+            android:exported="true" />
+        <activity
             android:name=".ex07"
             android:exported="true" />
         <activity
