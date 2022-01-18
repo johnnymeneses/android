@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Udemy2</string>
+    <string name="texto_apresentacao">Uma simples e perfeitamente extraída dose de espresso misturado com leite fresco e chocolate fazem esta bebida deliciosa</string>
+    <string name="ing_1">1 dose de espresso</string>
+    <string name="ing_2">100ml de leite</string>
+    <string name="ing_3">1 colher de chocolate em pó</string>
+    <string name="texto_tempo">15 minutos</string>
+    <string name="texto_titulo">Ingredientes</string>
 </resources>
+
+
