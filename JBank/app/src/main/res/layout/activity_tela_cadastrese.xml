@@ -25,6 +25,7 @@
         app:layout_constraintTop_toBottomOf="@id/logo"
         />
 
+
     <EditText
         android:id="@+id/edit_mail"
         style="@style/styleEditText"

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "163509518661",
-    "project_id": "projeto-firebase-be952",
-    "storage_bucket": "projeto-firebase-be952.appspot.com"
+    "project_number": "146015225001",
+    "project_id": "fir-ba770",
+    "storage_bucket": "fir-ba770.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:163509518661:android:58a9fba1f48b5383893e2c",
+        "mobilesdk_app_id": "1:146015225001:android:597b0fa30977ceafec95b8",
         "android_client_info": {
           "package_name": "com.johnny.projetofirebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "163509518661-47tbt72tkq1daauo11a92jpi0ke5h5m4.apps.googleusercontent.com",
+          "client_id": "146015225001-mmh1llr0vjadprbe0teq92qrd0qd522d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCy0shRTO-Ew3F0-l_Ac_vvEAwQKpcls0A"
+          "current_key": "AIzaSyAt6K78bGIOCV_3HJcyUO9aswpNwS2aHVY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "163509518661-47tbt72tkq1daauo11a92jpi0ke5h5m4.apps.googleusercontent.com",
+              "client_id": "146015225001-mmh1llr0vjadprbe0teq92qrd0qd522d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

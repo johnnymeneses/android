@@ -27,7 +27,6 @@ import com.google.firebase.auth.FirebaseUser;
 public class FormLogin extends AppCompatActivity {
 
     private TextView text_telaCadastro;
-
     private EditText edit_email;
     private EditText edit_senha;
     private Button btn_login;
@@ -39,6 +38,7 @@ public class FormLogin extends AppCompatActivity {
     private void AutenticarUsuario(View view){
         String email = edit_email.getText().toString();
         String senha = edit_senha.getText().toString();
+
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -148,9 +148,6 @@ public class FormLogin extends AppCompatActivity {
         edit_senha = findViewById(R.id.edit_senha);
         btn_login = findViewById(R.id.bt_entrar);
         progressBar = findViewById(R.id.progressbar);
-
-
-
 
     }
 

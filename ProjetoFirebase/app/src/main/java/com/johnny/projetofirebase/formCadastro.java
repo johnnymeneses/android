@@ -38,18 +38,18 @@ public class formCadastro extends AppCompatActivity {
     String usuarioID;
 
 
-
-    String[] mensagens = {"Preencha todos os campos","Cadastro Realizado com Sucesso"};
+    String[] mensagens = {"Preencha todos os campos", "Cadastro Realizado com Sucesso"};
 
 
     //Salvando o nome no Banco de Dados FireStore
-    private void SalvarDadosUsuario(){
+    private void SalvarDadosUsuario() {
         String nome = edit_nome.getText().toString();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+
         //Iniciar o FirebashAuth pra obter o usuario atual
-        Map<String,Object> usuarios = new HashMap<>();
-        usuarios.put("nome",nome);
+        Map<String, Object> usuarios = new HashMap<>();
+        usuarios.put("nome", nome);
 
         //Obter o ID do usuário atual (com o ID);
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -59,18 +59,19 @@ public class formCadastro extends AppCompatActivity {
         documentReference.set(usuarios).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Log.d("db","Sucesso ao salvar os dados");
+                Log.d("db", "Sucesso ao salvar os dados");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Log.d("db_error","Erro ao salvar os dados"+e.toString());
+                Log.d("db_error", "Erro ao salvar os dados" + e.toString());
             }
         });
 
 
     }
-    private void IniciarComponentes(){
+
+    private void IniciarComponentes() {
 
         //Recuperando os ID's dos campos da Tela de Cadastro
         edit_nome = findViewById(R.id.edit_nome);
@@ -116,75 +117,64 @@ public class formCadastro extends AppCompatActivity {
         });
     }
 
-        private void CadastrarUsuario(View view) {
+    private void CadastrarUsuario(View view) {
 
-            String email = edit_email.getText().toString();
-            String senha = edit_senha.getText().toString();
+        String email = edit_email.getText().toString();
+        String senha = edit_senha.getText().toString();
 
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
 
-                        SalvarDadosUsuario();
-                        //Mensagem OK
-                        Snackbar snackbar = Snackbar.make(view,mensagens[1],Snackbar.LENGTH_SHORT);
-                        snackbar.setBackgroundTint(Color.WHITE);
-                        snackbar.setTextColor(Color.BLACK);
-                        snackbar.show();
+                    SalvarDadosUsuario();
+                    //Mensagem OK
+                    Snackbar snackbar = Snackbar.make(view, mensagens[1], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
 
-                        //Apagando os campos
-                        edit_nome.setText("");
-                        edit_senha.setText("");
-                        edit_email.setText("");
+                    //Apagando os campos
+                    edit_nome.setText("");
+                    edit_senha.setText("");
+                    edit_email.setText("");
 
-                        //Setando o Focus no campo nome
+                    //Setando o Focus no campo nome
 
-                    }else{
-                        String erro;
+                } else {
+                    String erro;
 
-                        try {
-                            throw task.getException();
+                    try {
+                        throw task.getException();
 
-                        }catch (FirebaseAuthWeakPasswordException e){ //Senha menor que 6 caracteres
-                                erro = "Digite uma senha com no mínimo 6 caracteres";
-                        }catch (FirebaseAuthUserCollisionException e){ //Senha de email já cadastrado
-                                erro = "Esta conta já foi cadastrada";
-                        }catch (FirebaseAuthInvalidCredentialsException e){ //Senha com Email errado
-                            erro = "E-mail inválido";
-                        }catch (Exception e){
-                            erro = "Erro ao Cadastrar Usuário";
-                        }
-
-                        //Snackbar com a mensagem de erro
-                        Snackbar snackbar = Snackbar.make(view,erro,Snackbar.LENGTH_SHORT);
-                        snackbar.setBackgroundTint(Color.WHITE);
-                        snackbar.setTextColor(Color.BLACK);
-                        snackbar.show();
-
-
-
+                    } catch (FirebaseAuthWeakPasswordException e) { //Senha menor que 6 caracteres
+                        erro = "Digite uma senha com no mínimo 6 caracteres";
+                    } catch (FirebaseAuthUserCollisionException e) { //Senha de email já cadastrado
+                        erro = "Esta conta já foi cadastrada";
+                    } catch (FirebaseAuthInvalidCredentialsException e) { //Senha com Email errado
+                        erro = "E-mail inválido";
+                    } catch (Exception e) {
+                        erro = e.getMessage();
                     }
 
-
-
+                    //Snackbar com a mensagem de erro
+                    Snackbar snackbar = Snackbar.make(view, erro, Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
 
 
                 }
-            });
 
 
-
-
-
-
-
-        }
-
-
+            }
+        });
 
 
     }
+
+
+}
 
 
 
