@@ -1,5 +1,6 @@
 package johnny.com.monetario
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -36,13 +37,23 @@ class MainActivity : AppCompatActivity() {
         result = findViewById<TextView>(R.id.txt_result)
 
 
-
         val buttonConverter = findViewById<Button>(R.id.btn_converter)
+        val buttonNewTela = findViewById<Button>(R.id.btn_novaTela)
+
 
         buttonConverter.setOnClickListener{
             converterValor()
         }
 
+        buttonNewTela.setOnClickListener(){
+            novaTela()
+        }
+
+    }
+
+    fun novaTela(){
+        val intent = Intent(this, ConverterActivity::class.java)
+        startActivity(intent)
     }
 
 
