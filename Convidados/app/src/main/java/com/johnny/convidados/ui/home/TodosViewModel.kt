@@ -1,13 +1,13 @@
-package com.johnny.convidados.ui.slideshow
+package com.johnny.convidados.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class TodosViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "Todos os Convidados"
     }
     val text: LiveData<String> = _text
 }
