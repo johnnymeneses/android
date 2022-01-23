@@ -25,6 +25,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_nome" />
 
+
+
+
     <RadioGroup
         android:id="@+id/groupradio"
         android:layout_width="0dp"
