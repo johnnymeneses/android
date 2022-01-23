@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Convidados">
         <activity
-            android:name=".formCadastro"
+            android:name=".GuesFormActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

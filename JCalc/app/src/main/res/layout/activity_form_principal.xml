@@ -39,6 +39,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/button"
+
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="5dp"
             android:text="C" />
