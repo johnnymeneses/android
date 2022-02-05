@@ -12,6 +12,7 @@ import com.johnny.jbank.modelo.Cliente
 import com.johnny.jbank.modelo.contaCorrente
 
 class telaPrincipal : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_principal)
@@ -23,24 +24,21 @@ class telaPrincipal : AppCompatActivity() {
         buscaCLiente()
 
 
-
-
         val botaoDepositar = findViewById<Button>(R.id.btn_depositar)
         val botaoSacar = findViewById<Button>(R.id.btn_sacar)
         val botaoTranferir = findViewById<Button>(R.id.btn_Transferir)
 
-        botaoDepositar.setOnClickListener(){
+        botaoDepositar.setOnClickListener() {
             TelaDeposito()
         }
 
-        botaoSacar.setOnClickListener(){
+        botaoSacar.setOnClickListener() {
             TelaSaque()
         }
 
-        botaoTranferir.setOnClickListener(){
+        botaoTranferir.setOnClickListener() {
             TelaTransferencia()
         }
-
 
 
     }

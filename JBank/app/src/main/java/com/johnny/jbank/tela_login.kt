@@ -1,15 +1,10 @@
 package com.johnny.jbank
 
-import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_tela_login.*
 
 class tela_login : AppCompatActivity() {
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,8 +13,6 @@ class tela_login : AppCompatActivity() {
 
         //Escondendo o header
         supportActionBar!!.hide()
-
-        btn_entrar.
 
 
     }
