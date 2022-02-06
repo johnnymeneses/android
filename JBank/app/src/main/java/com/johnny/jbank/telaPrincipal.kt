@@ -49,8 +49,8 @@ class telaPrincipal : AppCompatActivity() {
         val nome = findViewById<TextView>(R.id.text_person)
         val saldo = findViewById<TextView>(R.id.text_saldocliente)
 
-        nome.setText(jm.nome)
-        saldo.setText("R$ ${john.saldo.toString()}")
+//        nome.setText(jm.nome)
+//        saldo.setText("R$ ${john.saldo.toString()}")
 
     }
 

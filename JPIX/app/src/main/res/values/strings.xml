@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JPIX</string>
+    <string name="versao">JPIX 1.0</string>
 </resources>
