@@ -14,14 +14,42 @@
         android:layout_height="150dp"
         android:layout_marginTop="150dp"
         android:src="@drawable/ic_bank"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/white" />
 
 
+    <EditText
+        android:id="@+id/edit_email"
+        style="@style/styleEditText"
+        android:layout_marginTop="30dp"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_logo" />
 
 
+    <EditText
+        android:id="@+id/edit_senha"
+        style="@style/styleEditText"
+        android:layout_marginTop="20dp"
+        android:hint="Senha"
+        android:inputType="numberPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_email" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/styleButton"
+        android:text="Entrar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha"
+        android:layout_marginTop="20dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
