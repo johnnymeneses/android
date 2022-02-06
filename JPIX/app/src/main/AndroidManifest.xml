@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JPIX">
         <activity
+            android:name=".telaLogin"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
