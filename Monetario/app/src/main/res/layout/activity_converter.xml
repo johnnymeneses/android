@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConverterActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:background="@color/teal_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/txt_real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ Real Brasileiro"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_valor_real"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:text="R$ 100.0"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="35sp"/>
+
+    <View
+        android:id="@+id/containerUser"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="290dp" />
+
+
+
+
+    <ImageView
+        android:id="@+id/image_converter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_baseline_currency_exchange_24"
+        app:layout_constraintStart_toStartOf="@id/containerUser"
+        app:layout_constraintEnd_toEndOf="@id/containerUser"
+        app:layout_constraintTop_toTopOf="@id/containerUser"
+        app:layout_constraintBottom_toBottomOf="@id/containerUser"
+        />
+
+    <TextView
+        android:id="@+id/txt_valor_dolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD 100.0"
+        android:textColor="@color/teal_700"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="530dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD Dolar Americano"
+        android:textColor="@color/teal_700"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="630dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

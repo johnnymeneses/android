@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/design_default_color_primary"
+
+
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversor de Valores"
+        android:textColor="@color/purple_200"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_field"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:textSize="35sp"
+        android:hint="R$ 99.27"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:checkedButton="@id/radio_USD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_field">
+
+        <RadioButton
+            android:id="@+id/radio_USD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dólar Americano - USD"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radio_NZD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dólar Neozelandês - NZD"
+            android:textSize="14sp" />
+        <RadioButton
+            android:id="@+id/radio_EUR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zona do Euro - EUR"
+            android:textSize="14sp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_GBP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libra Esterlina - GBP"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radio_PYG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guarani - PYG"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Converter"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+         />
+
+
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/edit_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+
+    <TextView
+        android:id="@+id/txt_dolarhoje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/txtStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_converter" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_converter" />
+
+
+    <Button
+        android:id="@+id/btn_novaTela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Nova Tela"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
